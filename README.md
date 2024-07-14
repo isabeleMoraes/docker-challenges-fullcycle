@@ -13,3 +13,20 @@ docker pull isabelemoraes99/go
 ```
 
 ## Desafio 2
+Criar um docker compose para subir 3 container
+1. Banco de dados
+2. Node.js
+3. Nginx
+
+Ao acessar o Nginx, o mesmo deve acessar o node e devolver uma pagina com o seguinte conteudo:
+```
+<h1>Full Cycle Rock</h1>
+- Lista de nomes cadastrados no banco
+```
+
+Tudo deve funcionar apenas levantando o docker compose e acessando http://localhost:8080
+
+### Como utilizar
+```
+docker compode up -d
+```
