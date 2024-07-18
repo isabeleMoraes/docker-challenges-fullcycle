@@ -1,4 +1,15 @@
 services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    volumes:
+      - ./nginx:/etc/nginx
+    networks:
+      - node-newtwork
+    ports:
+      - 8080:80
+    depends_on:
+      - app
 
   app:
     build: 
@@ -11,7 +22,7 @@ services:
     volumes: 
     - ./node:/home/node/app
     ports: 
-      - "3000:3000"
+      - "3000"
     depends_on:
       - db
     command: > 
