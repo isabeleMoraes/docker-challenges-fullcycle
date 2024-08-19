@@ -12,7 +12,7 @@ const connection = mysql.createConnection(config)
 const sql = `INSERT INTO PEOPLE(name) values('Isabele')`
 
 connection.query(sql)
-connection.query("SELECT name FROM people", function (err, result) { 
+connection.query("SELECT name FROM PEOPLE", function (err, result) { 
     app.get('/', (req,res) => {
         res.setHeader("Content-type", "text/html");
         res.write('<h1>Full Cycle Rocks!!</h1> </br>')
